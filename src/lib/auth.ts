@@ -8,7 +8,7 @@ if(!MDB_URI) {
 }
 
 const client = new MongoClient(MDB_URI);
-const db = client.db();
+const db = client.db("better-auth-db");
 
 export const auth = betterAuth({
     emailAndPassword: {
