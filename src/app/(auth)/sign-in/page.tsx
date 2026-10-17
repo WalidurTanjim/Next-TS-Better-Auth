@@ -12,7 +12,9 @@ const SignInPage = () => {
 
         const { data: resData, error } = await signIn.email({
             email: data.email,
-            password: data.password
+            password: data.password,
+            rememberMe: true,
+            callbackURL: '/'
         })
 
         console.log(resData, error);
